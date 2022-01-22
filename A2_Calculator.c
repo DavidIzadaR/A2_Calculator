@@ -1,4 +1,4 @@
-// A2_Calculator.cpp : This file contains the 'main' function. Program execution begins and ends there.
+// A2_Calculator.c
 //
 
 #include <stdio.h>
