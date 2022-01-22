@@ -8,12 +8,12 @@ int main()
     int a = 0;
     int b = 0;
     int i = 0;
-    char s[16] = {0};
+    char c = '?';
 
     while (1)
     {
         printf("Enter a statement: ");
-        i = scanf("%d %s %d", (int*) & a, (char*)&s[0], (int*) & b);
+        i = scanf("%d %c %d", & a, &c, & b);
         if (i != 3)
         {
             printf("Please, correct your statement...");
@@ -21,7 +21,7 @@ int main()
         }
 
         printf("The answer is: ");
-        switch (s[0]) 
+        switch (c) 
         {
         case '+':
             printf("%d + %d = %d\n", a, b, a + b);
@@ -35,9 +35,10 @@ int main()
         case '/':
             printf("\nQuotient : %d / %d = %d\n", a, b, a / b);
             printf("Remainder: %d / %d = %d\n", a, b, a % b);
+            printf("Floating point result = %f\n", (float)a / b);
             break;
         default:
-            printf("What is %s?\n", s);
+            printf("Unknown operator %c?\n", c);
             break;
         }
     }
